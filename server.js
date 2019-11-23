@@ -18,7 +18,7 @@ const { SHOPIFY_API_KEY, SHOPIFY_SECRET_API_KEY } = process.env;
 app.prepare().then(() => {
     const server = new Koa();
     server.use(session(server));
-    server.keys = SHOPIFY_SECRET_API_KEY;
+    server.keys = [SHOPIFY_SECRET_API_KEY];
 
     server.use(
         createShopifyAuth({
