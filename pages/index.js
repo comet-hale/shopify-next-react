@@ -12,7 +12,7 @@ const imgURL = 'https://cdn.shopify.com/s/files/1/0757/9955/files/empty-state.sv
 class Index extends React.Component {
     state = { open: false };
     render() {
-        console.log('this is just for testing');
+        console.log('this is for testing');
         const emptyState = !store.get('ids');
         return (
             <Page>
